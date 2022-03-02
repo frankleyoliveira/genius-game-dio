@@ -1,0 +1,118 @@
+body {
+  background: #111;  
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.genius {
+  background: #000;
+  border: 10px solid #000;
+  width: 90vw;
+  height: 90vw;
+  max-width: 430px;
+  max-height: 430px;
+  display: grid;
+  grid-template-areas: 'vd vm'
+  'am az';
+  gap: 10px;
+  border-radius: 100%;
+}
+
+.green {
+  grid-area: vd;
+  background: #0F0;
+  border-top-left-radius: 100%;
+}
+
+.red {
+  grid-area: vm;
+  background: #F00;
+  border-top-right-radius: 100%;
+}
+
+.yellow {
+  grid-area: am;
+  background: #FF0;
+  border-bottom-left-radius: 100%;
+}
+
+.blue {
+  grid-area: az;
+  background: #00F;
+  border-bottom-right-radius: 100%;
+}
+
+.green, .red, .yellow, .blue {
+  opacity: 0.8;
+}
+
+.selected {
+  opacity: 1;
+}
+
+.center {
+  border: 5px solid #CCC;
+  background: #ccc;
+  outline: 10px solid #000;
+  width: 35vw;
+  height: 35vw;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 1.5rem; 
+}
+  .start-mobile {
+    display: none;
+  }
+
+.display {
+  background: #000;
+  color: #FFF;
+  flex: 1;
+  border-radius: 150px 150px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border: 3px solid #000;
+}
+
+.start {
+  background: #ccc;  
+  flex: 1;
+  border-radius: 0 0 150px 150px;
+  text-align: center;  
+  border: 3px solid #000;  
+}
+
+#logo-estrela {
+  width: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  .display, .start {
+    display: none;
+  }
+  .center {
+    justify-content: center;
+    align-items: center;
+  }
+  .start-mobile {
+    display: block;
+  } 
+}
