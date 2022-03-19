@@ -55,6 +55,7 @@ body {
 
 .green, .red, .yellow, .blue {
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .selected {
@@ -75,6 +76,7 @@ body {
   flex-direction: column;
   font-weight: bold;
   font-size: 1.5rem; 
+  cursor: pointer;
 }
   .start-mobile {
     display: none;
